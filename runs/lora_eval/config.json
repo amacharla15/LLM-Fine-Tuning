@@ -1,0 +1,13 @@
+{
+  "run_name": "lora_eval_qwen25_05b",
+  "base_model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter_dir": "adapters/lora_sft_small_wsl_gpu",
+  "prompt_path": "eval/prompt_template.txt",
+  "eval_path": "eval/10_gold_examples.jsonl",
+  "max_new_tokens": 256,
+  "do_sample": false,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed": 42,
+  "trust_remote_code": true
+}

@@ -1,0 +1,10 @@
+{
+  "run_name": "baseline",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "max_new_tokens": 256,
+  "do_sample": false,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed": 42,
+  "trust_remote_code": true
+}

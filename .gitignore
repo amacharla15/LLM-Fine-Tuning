@@ -1,0 +1,8 @@
+.venv*/
+__pycache__/
+*.pyc
+.vscode/
+.ipynb_checkpoints/
+runs/**/output/
+runs/**/checkpoint-*/
+*.sh

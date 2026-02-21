@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "create_support_ticket tool call",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tool_name", "arguments"],
+  "properties": {
+    "tool_name": { "const": "create_support_ticket" },
+    "arguments": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["product", "category", "severity", "summary", "description"],
+      "properties": {
+        "product": {
+          "type": "string",
+          "enum": ["vpn", "email", "laptop", "account", "network", "printer", "app"]
+        },
+        "category": {
+          "type": "string",
+          "enum": ["access", "bug", "performance", "outage", "request", "billing"]
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 120
+        },
+        "description": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 1000
+        },
+        "os": {
+          "type": "string",
+          "enum": ["windows", "macos", "linux", "ios", "android", "unknown"]
+        },
+        "user_email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 254
+        }
+      }
+    }
+  }
+}
